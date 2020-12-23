@@ -38,7 +38,7 @@ class SubscriptionController extends Controller
     public function store(Request $request,$id){
 
         $chcek_user_subscription = auth()->user()->subscriptions()->where(function($query){
-            $query->whereNull('end_dat')
+            $query->whereNull('end_date')
                 ->orWhere('end_date','>',DATE('Y-m-d'));
         });
 
