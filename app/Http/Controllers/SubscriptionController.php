@@ -31,6 +31,7 @@ class SubscriptionController extends Controller
         if(!$member){
             return redirect()->route('subscription.index');
         }
+        
 
         return view('subscription.confirm')->with(compact('member'));
     }
