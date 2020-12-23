@@ -37,11 +37,14 @@ class SubscriptionController extends Controller
 
     public function store(Request $request,$id){
 
-        $chcek_user_subscription = auth()->user()->subscriptions();
+        $chcek_user_subscription = auth()->user()->subscriptions()->where(function($query){
+            $query->whereNull('end_dat')
+                ->orWhere('end_date','>',DATE('Y-m-d'));
+        });
 
-        // if($chcek_user_subscription->exists()){
-        //     return redirect()->back()->with('error','لديك اشتراك في العضوية سابقا');
-        // }
+        if($chcek_user_subscription->exists()){
+            return redirect()->back()->with('error','لديك اشتراك في العضوية سابقا');
+        }
 
         if(auth()->user()->isadmin){
              return redirect()->back()->with('error','لايمكنك الاشتراك في العضويات');
