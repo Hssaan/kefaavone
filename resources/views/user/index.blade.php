@@ -27,13 +27,14 @@
                                 <td>@if($user->isadmin) مدير @else عميل @endif</td>
                                 <td>
                                     @if(auth()->user()->id != $user->id)
-                                    <form class="actionButton" action="{{ route('user.delete',$user->id) }}" method="POST">
+                                    <form class="actionButton" action="{{ route('user.delete',$user->uuid) }}" method="POST" style="display: inline-block ">
                                         {{ csrf_field() }}
                                         <button type="submit" class="btn btn-danger">حذف</button>
-                                        <button href="{{ route('user.edit',$user->id) }}" class="btn btn-warning">تعديل</button>
                                     </form>
-                                    @endif
+                                    
 
+                                    <a href="{{ route('user.edit',$user->uuid) }}" class="btn btn-warning" style="display: inline-block ">تعديل</a>
+                                    @endif
                                 </td>
                             </tr>
                             @endforeach

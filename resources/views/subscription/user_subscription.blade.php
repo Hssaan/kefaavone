@@ -27,8 +27,8 @@
                             <tbody>
                                 @foreach($subscriptions as $subscription)
                                 <tr>
-                                    <td>{{$subscription->user->name}}</td>
-                                    <td>{{$subscription->member->name}}</td>
+                                    <td>{{optional($subscription->use)r->name}}</td>
+                                    <td>{{optional($subscription->member)->name}}</td>
                                     <td>{{$subscription->amount}}</td>
                                     <td>{{$subscription->start_date}}</td>
                                     <td>{{$subscription->end_date}}</td>
