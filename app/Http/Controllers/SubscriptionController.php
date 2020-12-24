@@ -51,7 +51,7 @@ class SubscriptionController extends Controller
              return redirect()->back()->with('error','لايمكنك الاشتراك في العضويات');
         }
 
-        $member = Member::where('uuid',$uuid)->first();
+        $member = Member::where('id',$id)->first();
         
         if(!$member){
             return redirect()->route('subscription.index');
@@ -63,7 +63,7 @@ class SubscriptionController extends Controller
 
         $subscription = new Subscription;
     
-        $subscription->member_id = $member->id;
+        $subscription->member_id = $member->uuid;
         $subscription->amount = $member->price;
         $subscription->user_id = auth()->user()->id;
         $subscription->payment_method = $request->payment_method;
