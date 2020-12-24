@@ -76,7 +76,7 @@ class UserController extends Controller
         if($request->filled('password'))
         $user->password = \Hash::make($request->password);
 
-        if(auth()->user()->id != $user->id)
+        if(auth()->user()->uuid != $user->uuid)
         $user->isadmin = $request->isadmin;
 
         $user_save = $user->save();
@@ -89,7 +89,7 @@ class UserController extends Controller
     public function delete(Request $request,$uuid){
 
         $user = User::where('uuid',$uuid)
-            ->where('id','<>',auth()->user()->id)
+            ->where('id','<>',auth()->user()->uuid)
             ->where('id','<>',1)->first();
         
         if(!$user){
