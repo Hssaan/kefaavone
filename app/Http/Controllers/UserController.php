@@ -89,7 +89,7 @@ class UserController extends Controller
     public function delete(Request $request,$uuid){
 
         $user = User::where('uuid',$uuid)
-            ->where('id','<>',auth()->user()->id)
+            ->where('id','<>',auth()->user()->uuid)
             ->where('id','<>',1)->first();
         
         if(!$user){
