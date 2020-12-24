@@ -173,32 +173,6 @@
       </div>
     </section><!-- End Pricing Section -->
 
-    <!-- ======= Team Section ======= -->
-    <section id="team" class="section-bg">
-      <div class="container">
-        <div class="section-header">
-          <h3 class="section-title">مطور المنصة</h3>
-          <span class="section-divider"></span>
-        </div>
-        <div class="row wow fadeInUp">
-          <div class="col-lg-3 col-md-6">
-            <div class="member">
-              <div class="pic"><img src="assets/img/team/team-1.jpg" alt=""></div>
-              <h4>حسان المالكي</h4>
-              <span>مصصم و مطور مواقع ويب</span>
-              <div class="social">
-
-                <a href=""><i class="fa fa-linkedin"></i>hassan-s-almalki</a>
-              </div>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section><!-- End Team Section -->
-
-
     <!-- ======= Contact Section ======= -->
     <section id="contact">
       <div class="container">
