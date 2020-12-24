@@ -261,7 +261,7 @@ h1, h2, h3, h4, h5, h6 {
   position: absolute;
   z-index: 30;
   right: calc(50% + 54px);
-  top: 20px;
+  top: 100px;
 }
 
 #intro .product-screens .product-screen-2 {
@@ -269,7 +269,7 @@ h1, h2, h3, h4, h5, h6 {
   z-index: 20;
   right: calc(50% - 154px);
   bottom: 0;
-  top: 90px;
+  top: 100px;
 }
 
 #intro .product-screens .product-screen-3 {
@@ -277,7 +277,7 @@ h1, h2, h3, h4, h5, h6 {
   z-index: 10;
   right: calc(50% - 374px);
   bottom: 0;
-  top: 150px;
+  top: 100px;
 }
 
 @media (max-width: 767px) {
@@ -1370,7 +1370,6 @@ body.mobile-nav-active #mobile-nav-toggle {
   color: #333;
   font-size: 18px;
   bottom: 0px;
-  position: fixed;
   width: 100%;
   text-align: center;
 }
