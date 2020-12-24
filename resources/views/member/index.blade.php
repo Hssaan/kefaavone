@@ -34,7 +34,7 @@
                                 <td>{{$member->price}}</td>
                                 <td>{{$member->subscriptions()->count()}}</td>
                                 <td>
-                                    <form class="actionButton" action="{{ route('member.delete',$member->id) }}" method="POST">
+                                    <form action="{{ route('member.delete',$member->id) }}" method="POST">
                                         {{ csrf_field() }}
                                         <button type="submit" class="btn btn-danger">حذف</button>
                                     </form>
