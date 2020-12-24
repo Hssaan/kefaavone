@@ -34,11 +34,11 @@
                                 <td>{{$member->price}}</td>
                                 <td>{{$member->subscriptions()->count()}}</td>
                                 <td>
-                                    <form action="{{ route('member.delete',$member->uuid) }}" method="POST">
+                                    <form action="{{ route('member.delete',$member->id) }}" method="POST">
                                         {{ csrf_field() }}
                                         <button type="submit" class="btn btn-danger">حذف</button>
                                     </form>
-                                    <a href="{{ route('member.edit',$member->uuid) }}" type="button" class="btn btn-warning">تعديل</a>
+                                    <a href="{{ route('member.edit',$member->id) }}" type="button" class="btn btn-warning">تعديل</a>
                                 </td>
                             </tr>
                             @endforeach

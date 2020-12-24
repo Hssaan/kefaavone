@@ -89,8 +89,8 @@ class UserController extends Controller
     public function delete(Request $request,$uuid){
 
         $user = User::where('uuid',$uuid)
-            ->where('uuid','<>',auth()->user()->uuid)
-            ->where('uuid','<>',1)->first();
+            ->where('id','<>',auth()->user()->id)
+            ->where('id','<>',1)->first();
         
         if(!$user){
             return redirect()->route('user.index');
