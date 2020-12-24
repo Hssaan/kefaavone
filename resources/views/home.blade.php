@@ -67,7 +67,7 @@
 
           <div class="col-lg-8 offset-lg-4">
             <div class="section-header wow fadeIn" data-wow-duration="1s">
-              <h3 class="section-title">مبادرات كفاء التطوعية</h3>
+              <h3 class="section-title">قيم كفاء</h3>
               <span class="section-divider"></span>
             </div>
           </div>
@@ -82,23 +82,19 @@
 
               <div class="col-lg-6 col-md-6 box wow fadeInRight">
                 <div class="icon"><i class="ion-ios-speedometer-outline"></i></div>
-                <h4 class="title"><a href="">1</a></h4>
-                <p class="description">///////////////////////.</p>
+                <h4 class="title"><a href="">التميز في الأداء</a></h4>
               </div>
               <div class="col-lg-6 col-md-6 box wow fadeInRight" data-wow-delay="0.1s">
                 <div class="icon"><i class="ion-ios-flask-outline"></i></div>
-                <h4 class="title"><a href="">2</a></h4>
-                <p class="description">///////////////////////.</p>
+                <h4 class="title"><a href="">الشراكة</a></h4>
               </div>
               <div class="col-lg-6 col-md-6 box wow fadeInRight" data-wow-delay="0.2s">
                 <div class="icon"><i class="ion-social-buffer-outline"></i></div>
-                <h4 class="title"><a href="">3</a></h4>
-                <p class="description">/////////////////////////.</p>
+                <h4 class="title"><a href="">الشفافية</a></h4>
               </div>
               <div class="col-lg-6 col-md-6 box wow fadeInRight" data-wow-delay="0.3s">
                 <div class="icon"><i class="ion-ios-analytics-outline"></i></div>
-                <h4 class="title"><a href="">4</a></h4>
-                <p class="description">////////////////////////.</p>
+                <h4 class="title"><a href="">المهنية</a></h4>
               </div>
             </div>
 
