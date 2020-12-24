@@ -651,7 +651,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #about .about-img {
-  height: 510px;
+  height: 100%;
   overflow: hidden;
 }
 
