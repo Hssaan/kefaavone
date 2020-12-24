@@ -86,6 +86,10 @@ class MemberController extends Controller
             return redirect()->route('member.index');
         }
 
+        if($member->subscriptions()->exists()){
+            return redirect()->back()->with('error','يتعذر حذف العضوية يوجد اشتراكات بها ');
+        }
+
         $member_delete = $member->delete();
 
         if($member_delete){
