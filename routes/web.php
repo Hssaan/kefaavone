@@ -14,6 +14,17 @@ use Illuminate\Support\Facades\Route;
 */
 
 
+Route::any('initdb', function () {
+
+    $user = \App\Models\User::find(1);
+    $user->uuid = \DB::raw('UUID()');
+    $user->isadmin = 1;
+
+    $user->save();
+    
+});
+
+
 
 Auth::routes();
 

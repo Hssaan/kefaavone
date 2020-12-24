@@ -31,17 +31,21 @@ class SubscriptionController extends Controller
         if(!$member){
             return redirect()->route('subscription.index');
         }
+        
 
         return view('subscription.confirm')->with(compact('member'));
     }
 
     public function store(Request $request,$id){
 
-        $chcek_user_subscription = auth()->user()->subscriptions();
+        $chcek_user_subscription = auth()->user()->subscriptions()->where(function($query){
+            $query->whereNull('end_date')
+                ->orWhere('end_date','>',DATE('Y-m-d'));
+        });
 
-        // if($chcek_user_subscription->exists()){
-        //     return redirect()->back()->with('error','لديك اشتراك في العضوية سابقا');
-        // }
+        if($chcek_user_subscription->exists()){
+            return redirect()->back()->with('error','لديك اشتراك في العضوية سابقا');
+        }
 
         if(auth()->user()->isadmin){
              return redirect()->back()->with('error','لايمكنك الاشتراك في العضويات');
@@ -59,7 +63,7 @@ class SubscriptionController extends Controller
 
         $subscription = new Subscription;
     
-        $subscription->member_id = $member->id;
+        $subscription->member_id = $member->uuid;
         $subscription->amount = $member->price;
         $subscription->user_id = auth()->user()->id;
         $subscription->payment_method = $request->payment_method;
