@@ -209,13 +209,7 @@
               <h3>كفاء</h3>
               <p>"كِفاء" هي منصة تطوعية تساعد الباحث عن الاعمال التطوعية بالوصول إلى المنظمة
                 التطوعية في خطوة واحدة.</p>
-              <div class="social-links">
-                <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
-                <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
-                <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
-                <a href="#" class="google-plus"><i class="fa fa-google-plus"></i></a>
-                <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
-              </div>
+
             </div>  
           </div>
 
@@ -233,7 +227,7 @@
 
               <div>
                 <i class="ion-ios-telephone-outline"></i>
-                <p>+966 59 696 6667</p>
+                <p dir="ltr">+966 59 696 6667</p>
               </div>
 
             </div>
