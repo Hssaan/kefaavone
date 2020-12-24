@@ -44,14 +44,14 @@ Route::group(['middleware' => ['auth']], function () {
         Route::post('/member/create', [App\Http\Controllers\MemberController::class, 'store'])->name('member.store');
         Route::get('/member/edit/{id}', [App\Http\Controllers\MemberController::class, 'edit'])->name('member.edit');
         Route::post('/member/edit/{id}', [App\Http\Controllers\MemberController::class, 'update'])->name('member.update');
-        Route::post('/member/delete/{uuid}', [App\Http\Controllers\MemberController::class, 'delete'])->name('member.delete');
+        Route::post('/member/delete/{id}', [App\Http\Controllers\MemberController::class, 'delete'])->name('member.delete');
 
         Route::get('/user', [App\Http\Controllers\UserController::class, 'index'])->name('user.index');
         Route::get('/user/create', [App\Http\Controllers\UserController::class, 'create'])->name('user.create');
         Route::post('/user/create', [App\Http\Controllers\UserController::class, 'store'])->name('user.store');
         Route::get('/user/edit/{id}', [App\Http\Controllers\UserController::class, 'edit'])->name('user.edit');
         Route::post('/user/edit/{id}', [App\Http\Controllers\UserController::class, 'update'])->name('user.update');
-        Route::post('/user/delete/{id}', [App\Http\Controllers\UserController::class, 'delete'])->name('user.delete');
+        Route::post('/user/delete/{uuid}', [App\Http\Controllers\UserController::class, 'delete'])->name('user.delete');
 
         Route::get('/subscription/user', [App\Http\Controllers\SubscriptionController::class, 'userSubscription'])->name('subscription.user');
         Route::post('/subscription/active/{id}', [App\Http\Controllers\SubscriptionController::class, 'active'])->name('subscription.active');
