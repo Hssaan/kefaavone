@@ -146,7 +146,7 @@
   <footer id="footer" style="bottom:0px">
     <div class="container">
       <div class="row">
-        <div class="col-lg-6 text-lg-left text-center">
+        <div class="col-lg text-center">
           <div class="credits">
            تصميم و تطوير : حسان المالكي
           </div>
