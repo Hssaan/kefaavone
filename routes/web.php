@@ -25,6 +25,15 @@ Route::any('initdb', function () {
 });
 
 
+Route::any('resetdata', function () {
+    \DB::statment('TRUNCATE kefaavone.subscriptions;');
+    \DB::statment('TRUNCATE kefaavone.members');
+});
+
+
+
+
+
 
 Auth::routes();
 
