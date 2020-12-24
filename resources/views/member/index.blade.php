@@ -38,7 +38,7 @@
                                         {{ csrf_field() }}
                                         <button type="submit" class="btn btn-danger">حذف</button>
                                     </form>
-                                    <a href="{{ route('member.edit',$member->id) }}" type="button" class="btn btn-warning">تعديل</a>
+                                    <a href="{{ route('member.edit',$member->uuid) }}" type="button" class="btn btn-warning">تعديل</a>
                                 </td>
                             </tr>
                             @endforeach
