@@ -26,12 +26,20 @@
                                 <td>{{$user->email}}</td>
                                 <td>@if($user->isadmin) مدير @else عميل @endif</td>
                                 <td>
+                                    @php 
+                                    if(!$user->uuid){
+                                        $user->uuid = \DB::raw('UUID()');
+                                        $user->save();
+
+                                        $user->refresh();
+                                    }
+                                    @endphp
+
                                     @if(auth()->user()->id != $user->id)
                                     <form class="actionButton" action="{{ route('user.delete',$user->uuid) }}" method="POST" style="display: inline-block ">
                                         {{ csrf_field() }}
                                         <button type="submit" class="btn btn-danger">حذف</button>
                                     </form>
-                                    
 
                                     <a href="{{ route('user.edit',$user->uuid) }}" class="btn btn-warning" style="display: inline-block ">تعديل</a>
                                     @endif

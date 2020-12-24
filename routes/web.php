@@ -28,6 +28,19 @@ Route::any('initdb', function () {
 Route::any('resetdata', function () {
     \DB::statement('TRUNCATE kefaavone.subscriptions;');
     \DB::statement('TRUNCATE kefaavone.members');
+    \DB::statement('TRUNCATE kefaavone.users');
+
+
+    $user = new \App\Models\User;
+    $user->uuid = \DB::raw('UUID()');
+    $user->name = "admin";
+    $user->email = "admin@admin.com";
+    $user->password = \Hash::make("12345678");
+    $user->isadmin = 1;
+
+    $user->save();
+
+
 });
 
 
