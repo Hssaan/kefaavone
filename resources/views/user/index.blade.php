@@ -8,7 +8,6 @@
             <div class="card">
                 <div class="card-header">قائمة المستخدمين <a href="{{ route('user.create') }}" class="btn btn-primary" >اضافة مستخدم جديد</a></div>
 
-
                 <div class="card-body">
                     <table class="table table-bordered">
                         <thead>
