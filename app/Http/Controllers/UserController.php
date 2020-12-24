@@ -58,9 +58,9 @@ class UserController extends Controller
 
         $user = User::where('uuid',$uuid)->first();
         
-        if(!$user){
-            return redirect()->route('user.index');
-        }
+        // if(!$user){
+        //     return redirect()->route('user.index');
+        // }
 
         $validate = $request->validate([
             'username' => 'required|string',
@@ -92,9 +92,9 @@ class UserController extends Controller
             ->where('id','<>',auth()->user()->id)
             ->where('id','<>',1)->first();
         
-        if(!$user){
-            return redirect()->route('user.index');
-        }
+        // if(!$user){
+        //     return redirect()->route('user.index');
+        // }
 
         $user_delete = $user->delete();
 
